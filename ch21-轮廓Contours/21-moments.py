@@ -16,7 +16,8 @@ img = cv2.imread('../data/star.png', 0)
 ret, thresh = cv2.threshold(img, 127, 255, 0)
 # ret, binary = cv2.threshold(gray,127,255,cv2.THRESH_BINARY)
 # contours,hierarchy = cv2.findContours(thresh, 1, 2)
-image, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+image = img
 # contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 
 print('contours len:', len(contours))

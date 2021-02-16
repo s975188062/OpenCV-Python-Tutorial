@@ -23,7 +23,7 @@ cv2.imshow('imgray', imgray)
 
 ret, thresh = cv2.threshold(imgray, 244, 255, 0)
 
-img, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 print('len(contours', len(contours))
 contours2=[cnt for cnt in contours if cv2.contourArea(cnt)>200]#过滤太小的contour
 print('过滤太小的contour', len(contours2))
